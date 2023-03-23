@@ -44,7 +44,7 @@ class _AddWorkState extends State<AddWork> {
     dateController.clear();
   }
 
-  // Adding Student
+  // Adding Works
   CollectionReference works = FirebaseFirestore.instance.collection('work');
 
   Future<void> addWork() {
@@ -178,7 +178,7 @@ class _AddWorkState extends State<AddWork> {
                   children: [
                     ElevatedButton(
                       onPressed: () {
-                        // Validate returns true if the form is valid, otherwise false.
+                       
                         if (_formKey.currentState!.validate()) {
                           setState(() {
                             title = titleController.text;

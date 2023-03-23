@@ -14,10 +14,10 @@ class _ListWorkState extends State<ListWork> {
   final Stream<QuerySnapshot> worksStream =
       FirebaseFirestore.instance.collection('work').snapshots();
 
-  // For Deleting User
+  // For Deleting Work Note
   CollectionReference works = FirebaseFirestore.instance.collection('work');
   Future<void> deleteWork(id) {
-    // print("User Deleted $id");
+    // print("Note Deleted $id");
     return works
         .doc(id)
         .delete()
