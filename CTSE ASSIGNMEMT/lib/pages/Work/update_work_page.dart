@@ -12,11 +12,11 @@ class UpdateWork extends StatefulWidget {
 class _UpdateWorkState extends State<UpdateWork> {
   final _formKey = GlobalKey<FormState>();
 
-  // Updaing Student
-  CollectionReference students = FirebaseFirestore.instance.collection('work');
+  // Updaing Work notes
+  CollectionReference works = FirebaseFirestore.instance.collection('work');
 
   Future<void> updateWork(id, title, description, progress, deadline, date) {
-    return students
+    return works
         .doc(id)
         .update({
           'title': title,
