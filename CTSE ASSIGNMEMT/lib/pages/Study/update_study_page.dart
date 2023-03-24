@@ -14,7 +14,7 @@ class _UpdateStudyState extends State<UpdateStudy> {
 
   CollectionReference studies = FirebaseFirestore.instance.collection('study');
 
-  Future<void> updateUser(
+  Future<void> updateStudy(
       id, subjectName, description, completionStatus, dueDate, date) {
     return studies
         .doc(id)
@@ -176,7 +176,7 @@ class _UpdateStudyState extends State<UpdateStudy> {
                             onPressed: () {
                               // Validate returns true if the form is valid, otherwise false.
                               if (_formKey.currentState!.validate()) {
-                                updateUser(widget.id, subjectName, description,
+                                updateStudy(widget.id, subjectName, description,
                                     completionStatus, dueDate, date);
                                 Navigator.pop(context);
                               }
