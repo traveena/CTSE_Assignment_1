@@ -14,10 +14,10 @@ class _ListStudyState extends State<ListStudy> {
   final Stream<QuerySnapshot> studiesStream =
       FirebaseFirestore.instance.collection('study').snapshots();
 
-  // For Deleting User
+  // For Deleting Study
   CollectionReference studies = FirebaseFirestore.instance.collection('study');
   Future<void> deleteStudy(id) {
-    // print("User Deleted $id");
+    // print("Study Deleted $id");
     return studies
         .doc(id)
         .delete()

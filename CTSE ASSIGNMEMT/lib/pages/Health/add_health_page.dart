@@ -48,7 +48,7 @@ class _AddHealthState extends State<AddHealth> {
     dateController.clear();
   }
 
-  // Adding Student
+  // Adding Health
   CollectionReference healths = FirebaseFirestore.instance.collection('health');
 
   Future<void> addHealth() {
