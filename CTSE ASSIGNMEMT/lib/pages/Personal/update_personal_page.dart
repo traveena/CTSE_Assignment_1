@@ -12,7 +12,7 @@ class UpdatePersonal extends StatefulWidget {
 class _UpdatePersonalState extends State<UpdatePersonal> {
   final _formKey = GlobalKey<FormState>();
 
-  // Updaing Student
+  // Updaing Personal
   CollectionReference personals =
       FirebaseFirestore.instance.collection('personal');
 
