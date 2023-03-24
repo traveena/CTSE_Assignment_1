@@ -50,7 +50,7 @@ class _AddStudyState extends State<AddStudy> {
     dateController.clear();
   }
 
-  // Adding Student
+  // Adding Study
   CollectionReference studies = FirebaseFirestore.instance.collection('study');
 
   Future<void> addStudy() {
