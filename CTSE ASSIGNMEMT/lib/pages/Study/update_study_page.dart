@@ -12,7 +12,7 @@ class UpdateStudy extends StatefulWidget {
 class _UpdateStudyState extends State<UpdateStudy> {
   final _formKey = GlobalKey<FormState>();
 
-  // Updaing Student
+  // Updaing studies
   CollectionReference studies = FirebaseFirestore.instance.collection('study');
 
   Future<void> updateUser(

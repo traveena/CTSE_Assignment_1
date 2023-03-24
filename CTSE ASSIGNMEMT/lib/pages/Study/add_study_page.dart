@@ -10,11 +10,7 @@ class AddStudy extends StatefulWidget {
 
 class _AddStudyState extends State<AddStudy> {
   final _formKey = GlobalKey<FormState>();
-  // List<String> completionStatus = <String>[
-  //   'Pending',
-  //   'In progress',
-  //   'Completed'
-  // ];
+ 
 
   var subjectName = "";
   var description = "";
@@ -50,7 +46,7 @@ class _AddStudyState extends State<AddStudy> {
     dateController.clear();
   }
 
-  // Adding Student
+  // Adding studies
   CollectionReference studies = FirebaseFirestore.instance.collection('study');
 
   Future<void> addStudy() {
@@ -68,7 +64,7 @@ class _AddStudyState extends State<AddStudy> {
 
   @override
   Widget build(BuildContext context) {
-    // String progressValue = 'Not started';
+
 
     return Scaffold(
       appBar: AppBar(

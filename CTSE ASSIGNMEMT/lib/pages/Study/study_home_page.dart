@@ -37,10 +37,7 @@ class _StudyHomePageState extends State<StudyHomePage> {
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            // child: Text(
-            //   'Health Notes List',
-            //   style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
-            // ),
+         
           ),
           Expanded(
             child: ListStudy(),
