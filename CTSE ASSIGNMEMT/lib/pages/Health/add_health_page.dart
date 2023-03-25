@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
+//defines Add health widget
 class AddHealth extends StatefulWidget {
   AddHealth({Key? key}) : super(key: key);
 
@@ -48,7 +49,7 @@ class _AddHealthState extends State<AddHealth> {
     dateController.clear();
   }
 
-  // Adding Health
+  // Adding health
   CollectionReference healths = FirebaseFirestore.instance.collection('health');
 
   Future<void> addHealth() {
@@ -122,7 +123,7 @@ class _AddHealthState extends State<AddHealth> {
                 child: TextFormField(
                   autofocus: false,
                   decoration: InputDecoration(
-                    labelText: 'Water Amount: ',
+                    labelText: 'Water Amount(L): ',
                     labelStyle: TextStyle(fontSize: 20.0),
                     border: OutlineInputBorder(),
                     errorStyle:
@@ -218,7 +219,7 @@ class _AddHealthState extends State<AddHealth> {
                         }
                       },
                       child: Text(
-                        'Register',
+                        'Add',
                         style: TextStyle(fontSize: 18.0),
                       ),
                     ),

@@ -14,10 +14,8 @@ class _ListHealthState extends State<ListHealth> {
   final Stream<QuerySnapshot> healthsStream =
       FirebaseFirestore.instance.collection('health').snapshots();
 
-  // For Deleting Health
   CollectionReference healths = FirebaseFirestore.instance.collection('health');
   Future<void> deleteHealth(id) {
-    // print("Health Deleted $id");
     return healths
         .doc(id)
         .delete()

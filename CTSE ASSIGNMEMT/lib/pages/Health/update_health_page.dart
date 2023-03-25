@@ -12,7 +12,7 @@ class UpdateHealth extends StatefulWidget {
 class _UpdateHealthState extends State<UpdateHealth> {
   final _formKey = GlobalKey<FormState>();
 
-  // Updaing Health
+  // Updaing health
   CollectionReference healths = FirebaseFirestore.instance.collection('health');
 
   Future<void> updateHealth(
@@ -39,7 +39,6 @@ class _UpdateHealthState extends State<UpdateHealth> {
       ),
       body: Form(
           key: _formKey,
-          // Getting Specific Data by ID
           child: FutureBuilder<DocumentSnapshot<Map<String, dynamic>>>(
             future: FirebaseFirestore.instance
                 .collection('health')
